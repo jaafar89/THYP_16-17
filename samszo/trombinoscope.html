@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Simple Template Example</title>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.csv.js"></script>
+ 
+
+ </head>
+ <body>
+TOTO
+    <script type="text/javascript">
+    var urlData = "https://docs.google.com/spreadsheets/d/1FP1ZqWonLsnLJBX4XY3KUtOJe-v4bY4Se-ZrImGUwos/pub?gid=840118204&single=true&output=csv";
+    		d3.csv(urlData, function(data)
+    	    {
+    	        //prices is an array of json objects containing the data in from the csv
+    	        console.log("data:", data)
+
+    	    })
+    	    </script>
+
+
+ </body>
+</html>
