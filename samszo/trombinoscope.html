@@ -2,20 +2,25 @@
 <html>
  <head>
     <title>Simple Template Example</title>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.csv.js"></script>
+	<meta charset="utf-8">    
+    <script type="text/javascript" src="js/d3.v3.js"></script>
+ 	<script type="text/javascript" src="js/jquery.min.js" ></script>
  
 
  </head>
  <body>
-TOTO
+ 	<div id="trombi"/>
     <script type="text/javascript">
-    var urlData = "https://docs.google.com/spreadsheets/d/1FP1ZqWonLsnLJBX4XY3KUtOJe-v4bY4Se-ZrImGUwos/pub?gid=840118204&single=true&output=csv";
+	    var urlData = "php/lecteurFlux.php?url=THYP1617data";
     		d3.csv(urlData, function(data)
     	    {
     	        //prices is an array of json objects containing the data in from the csv
-    	        console.log("data:", data)
-
+    	        //console.log("data:", data);
+    	        data.forEach(function(d,i){
+	    	        	var h = d.Prénom+" "+d.Nom+" "+d['N° étudiant'];
+    	            $('<div class="data" id="data_' + i + '"></div>').html(h).appendTo('#trombi');
+    	        		
+    	        });
     	    })
     	    </script>
 
