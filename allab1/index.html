@@ -1,57 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Resume</title>
-<link type="text/css" rel="stylesheet" href="css/green.css" />
-<link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
-<!--[if IE 7]>
-<link href="css/ie7.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<!--[if IE 6]>
-<link href="css/ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.tipsy.js"></script>
-<script type="text/javascript" src="js/jquery.colorbox.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript">
-		Cufon.replace('h1,h2');
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untitled Document</title>
+
+<style>
+html {box-sizing: border-box;}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {font-family:Verdana, Arial, Helvetica, sans-serif;}
+.gallery {
+    width:80%;
+    table-layout:fixed;
+    display:table;
+    text-align:center;
+    margin:auto;
+    border-spacing: 10px 0;
+}
+.tr {display:table-row;}
+.gallery a, .base p {
+    display:table-cell;
+    margin:0;
+    vertical-align:top;
+}
+.gallery a {
+    padding:10px 5px 0;
+    text-align:center;
+    background:#444;
+    border-radius:5px 5px 0 0;
+    color:#fff;
+}
+.base p {
+    vertical-align:bottom;
+    background: linear-gradient(to bottom, #404040 0%, #353535 100%) repeat scroll 0 0 #393939;
+    border-bottom: 1px solid #111111;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #494949;
+    box-shadow: 2px -1px 21px -3px #000000;
+    padding:10px 5px;
+    position: relative;
+    font-size: 12px;
+    color:#fff;
+}
+.gallery img {
+    width:100%;
+    height:auto;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 2px #222222;
+}
+</style>
+<script type="text/javascript" src="js/d3.v3.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+
 </head>
+
 <body>
-<!-- Begin Wrapper -->
-<div id="wrapper">
-  <div class="wrapper-top"></div>
-  <div class="wrapper-mid">
-    <!-- Begin Paper -->
-    <div id="paper">
-      <div class="paper-top"></div>
-      <div id="paper-mid">
-        <div class="entry">
 
-
-          <ul class="works">
-            <li><a href="images/1.jpg" rel="gallery" title="Nom Prenom " class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-            <li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet." class="cboxElement"><img src="images/image.jpg" alt=""></a></li>
-          </ul>
-      
-        <!-- Begin 5th Row -->
-      </div>
-      <div class="clear"></div>
-      <div class="paper-bottom"></div>
-    </div>
-    <!-- End Paper -->
-  </div>
- 
+<div id="trombi">
+    <script type="text/javascript">
+        var urlData = "php/lecteurFlux.php?url=THYP1617data";
+            d3.csv(urlData, function(data)
+            {
+                data.forEach(function(d,i){
+                        var h = d.Prénom+" "+d.Nom+" "+d['N° étudiant'];
+                    $('<div class="data" id="data_' + i + '"></div>').html(h).appendTo('#trombi');
+                        
+                });
+            })
+            </script>
 </div>
-<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
-<!-- End Wrapper -->
+
+
+
+<div class="gallery">
+        <div class="tr">
+        <a href="http://www.summitpost.org/sharkfin-tower-from-boston-basin/860738"><img width="200" height="150" data-src="http://www.summitpost.org/images/medium/860738.jpg" src="http://www.summitpost.org/images/small/860738.jpg" alt="Sharkfin Tower from Boston Basin"></a> 
+        <a href="http://www.summitpost.org/mixup-peak-s-north-face/860741"><img width="200" height="150" data-src="http://www.summitpost.org/images/medium/860741.jpg" src="http://www.summitpost.org/images/small/860741.jpg" alt="Mixup Peak s North Face"></a>
+        <a href="http://www.summitpost.org/cascade-valley-looking-west/860736"><span><img width="200" height="150" data-src="http://www.summitpost.org/images/medium/860736.jpg" src="http://www.summitpost.org/images/small/860736.jpg" alt="Cascade Valley looking West"></span></a>
+        </div>
+
+
+
+
+
+        <div class="base tr">
+                <p>Sharkfin Tower</p>
+                <p>Mixup Peak's North Face</p>
+                <p>Cascade Valley looking West</p>
+        </div>
+</div>
 </body>
 </html>
