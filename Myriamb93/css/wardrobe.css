@@ -1,0 +1,84 @@
+
+html { 
+  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+   font-family: "Calibri"; 
+   font-weight: 300;
+
+
+}
+
+a {
+    color: black;
+}
+
+.titles { 
+	text-align: center;
+	color: white;
+	letter-spacing: 8;
+    border-bottom: 3px solid white;
+    padding-bottom: 6px;
+    
+
+
+}
+
+
+
+.tab{
+	color: white;
+
+}
+.sommaire { 
+	text-align: center;
+	text-align: justify;
+	text-justify: inter-word;
+	
+
+
+}
+
+.formation { 
+	text-align: center;
+	color: #ffb3f3;
+	font-weight: bold;
+
+
+}
+
+.content {
+
+	background-color:  rgba(43,43,43,0.6);
+	color: white;
+	padding: 150px;
+	height: 1508px;
+	width: 480px;
+	margin: 100 auto;
+
+}
+
+.profile_photo{
+	height: 230px;
+	border-radius: 5%;
+
+}
+
+h1{
+	    letter-spacing: 6;
+}
+
+
+th {
+
+	font-weight: normal;
+	letter-spacing: 1;
+}
+
+
