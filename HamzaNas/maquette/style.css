@@ -1,0 +1,16 @@
+.left_picture, .div_left_picture
+{
+	width: 200px;
+}
+
+.div_left_picture, .div_right_content
+{
+	float: left;
+}
+
+.div_student
+{
+	background-color: #dedede;
+    overflow: auto;
+    padding: 20px;
+}
