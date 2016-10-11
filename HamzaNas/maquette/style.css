@@ -14,3 +14,22 @@
     overflow: auto;
     padding: 20px;
 }
+
+.icone_git
+{
+	width: 20px;
+}
+
+.icone_mail
+{
+	width: 20px;
+}
+.div_graph
+{
+	float: left;
+    margin-left: 62px;
+}
+.div_inforamation
+{
+	float:left;
+}
